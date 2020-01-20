@@ -2,5 +2,8 @@ module.exports = {
   "transpileDependencies": [
     "vuetify"
   ],
-  "public_path": ''
+  publicPath: process.env.NODE_ENV === 'production'
+    ? '/prueba-precompro/'
+    : '/',
+  outputDir : 'docs'
 }
